@@ -3390,7 +3390,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 0, 0, 5),
                         Size = UDim2.new(0, 200, 0, 30),
-                        Font = Enum.Font.,
+                        Font = Enum.Font.GothamMedium,
                         Text = Name,
                         TextColor3 = Theme.PrimaryTextColor,
                         TextSize = 16,
