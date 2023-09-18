@@ -35,6 +35,20 @@ local Themes = {
         NotificationColor = Color3.fromRGB(25, 25, 25),
         NotificationUIStrokeColor = Color3.fromRGB(125, 125, 125)
     },
+    ['Kaos'] = {
+        BackgroundColor = Color3.fromRGB(0, 0, 0),
+        SidebarColor = Color3.fromRGB(30, 30, 30),
+        PrimaryTextColor = Color3.fromRGB(238, 255, 0),
+        SecondaryTextColor = Color3.fromRGB(135, 135, 135),
+        UIStrokeColor = Color3.fromRGB(60, 60, 60),
+        PrimaryElementColor = Color3.fromRGB(30, 30, 30),
+        SecondaryElementColor = Color3.fromRGB(50, 50, 50),
+        OtherElementColor = Color3.fromRGB(25, 25, 25),
+        ScrollBarColor = Color3.fromRGB(229, 255, 0),
+        PromptColor = Color3.fromRGB(40, 40, 40),
+        NotificationColor = Color3.fromRGB(25, 25, 25),
+        NotificationUIStrokeColor = Color3.fromRGB(238, 255, 0)
+    },
     ['Lighter'] = {
         BackgroundColor = Color3.fromRGB(40, 40, 40),
         SidebarColor = Color3.fromRGB(45, 45, 45),
@@ -335,7 +349,7 @@ do
             local Text = Text or 'Text'
             local Duration = Duration or 5
 
-            if not CoreGui:FindFirstChild('Visual UI Library | .gg/puxxCphTnK | Notifications') then
+            if not CoreGui:FindFirstChild('Visual UI Library | .gg/u3G227VNfd | Notifications') then
                 Utility:Create('ScreenGui', {
                     Name = 'Visual UI Library | .gg/u3G227VNfd | Notifications',
                     Parent = CoreGui
@@ -1122,6 +1136,8 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
             Theme = Themes['Purple']
         elseif Theme == 'sentinel' then
             Theme = Themes['Sentinel']
+            elseif Theme == 'kaos' then
+                Theme = Themes['Kaos']
         elseif Theme == 'synapse x' then
             Theme = Themes['Synapse X']
         elseif Theme == 'krnl' then
@@ -1587,6 +1603,15 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                     writefile('VisualUILibraryCurrentTheme.json', HttpService:JSONEncode(NewTable))
                     Config['Theme_4z3s4QrUhfqt703FmiAe'] = HttpService:JSONEncode(NewTable)
                     ChangeThemeValue()
+                    elseif NewTheme == 'kaos' then
+                        Theme = Themes['Kaos']
+                        local NewTable = {}
+                        for Index, Value in next, Theme do
+                            NewTable[Index] = Utility:SplitColor(Value)
+                        end
+                        writefile('VisualUILibraryCurrentTheme.json', HttpService:JSONEncode(NewTable))
+                        Config['Theme_4z3s4QrUhfqt703FmiAe'] = HttpService:JSONEncode(NewTable)
+                        ChangeThemeValue()
                 elseif NewTheme == 'synapse x' then
                     Theme = Themes['Synapse X']
                     local NewTable = {}
