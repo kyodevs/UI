@@ -493,10 +493,10 @@ do
                     AnchorPoint = Vector2.new(0.5, 0),
                     Position = UDim2.new(0.5, 0, 0, 5),
                     Size = UDim2.new(0, 0, 0, 20),
-                    Font = Enum.Font.Gotham,
+                    Font = Enum.Font.IndieFlower,
                     Text = Title,
                     TextColor3 = Theme.PrimaryTextColor,
-                    TextSize = 20,
+                    TextSize = 30,
                     ZIndex = 102,
                     TextXAlignment = Enum.TextXAlignment.Center
                 }),
