@@ -2438,7 +2438,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                         AnchorPoint = Vector2.new(1, 0.5),
                         Position = UDim2.new(0, 400, 0, 20),
                         Size = UDim2.new(0, 50, 0, 25),
-                        Font = Enum.Font.,
+                        Font = Enum.Font.GothamMedium,
                         PlaceholderColor3 = Theme.SecondaryTextColor,
                         Text = Placeholder,
                         TextColor3 = Theme.SecondaryTextColor,
