@@ -1192,7 +1192,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                 Font = Enum.Font.Bodoni,
                 Text = IntroText,
                 TextColor3 = Theme.PrimaryTextColor,
-                TextSize = 18,
+                TextSize = 25,
                 ZIndex = 2,
                 TextXAlignment = Enum.TextXAlignment.Center
             }),
